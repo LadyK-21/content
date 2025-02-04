@@ -1,15 +1,8 @@
 ---
-title: Window.personalbar
+title: "Window: personalbar property"
+short-title: personalbar
 slug: Web/API/Window/personalbar
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.personalbar
 ---
 
@@ -25,7 +18,7 @@ For privacy and interoperability reasons, the value of the `visible` property is
 
 An object containing a single property:
 
-- `visible` {{readonlyinline}}
+- `visible` {{ReadOnlyInline}}
   - : A boolean property, `false` if this `Window` is a popup, and `true` otherwise.
 
 ## Specifications

@@ -2,14 +2,15 @@
 title: clip
 slug: Web/CSS/clip
 page-type: css-property
-tags:
-  - Deprecated
+status:
+  - deprecated
 browser-compat: css.properties.clip
 ---
 
 {{CSSRef}}{{Deprecated_Header}}
 
-> **Warning:** Where possible, authors are encouraged to use the newer {{cssxref("clip-path")}} property instead.
+> [!WARNING]
+> Where possible, authors are encouraged to use the newer {{cssxref("clip-path")}} property instead.
 
 The **`clip`** [CSS](/en-US/docs/Web/CSS) property defines a visible portion of an element. The `clip` property applies only to absolutely positioned elements — that is, elements with {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.
 
@@ -53,29 +54,17 @@ clip: unset;
 
 ### Clipping an image
 
-#### HTML
-
 ```html
 <p class="dotted-border">
-  <img
-    src="macarons.png"
-    title="Original graphic" />
-  <img
-    id="top-left"
-    src="macarons.png"
-    title="Graphic clipped to upper left" />
-  <img
-    id="middle"
-    src="macarons.png"
-    title="Graphic clipped towards middle" />
+  <img src="macarons.png" alt="Original graphic" />
+  <img id="top-left" src="macarons.png" alt="Graphic clipped to upper left" />
+  <img id="middle" src="macarons.png" alt="Graphic clipped towards middle" />
   <img
     id="bottom-right"
     src="macarons.png"
-    title="Graphic clipped to bottom right" />
+    alt="Graphic clipped to bottom right" />
 </p>
 ```
-
-#### CSS
 
 ```css
 .dotted-border {
@@ -108,9 +97,7 @@ clip: unset;
 }
 ```
 
-#### Result
-
-{{EmbedLiveSample('', '', '450px')}}
+{{EmbedLiveSample('clipping_an_image', '', '450px')}}
 
 ## Specifications
 

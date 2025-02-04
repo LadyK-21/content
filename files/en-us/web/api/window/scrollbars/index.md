@@ -1,18 +1,12 @@
 ---
-title: Window.scrollbars
+title: "Window: scrollbars property"
+short-title: scrollbars
 slug: Web/API/Window/scrollbars
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.scrollbars
 ---
 
-{{APIRef()}}
+{{APIRef}}
 
 Returns the `scrollbars` object.
 
@@ -24,7 +18,7 @@ For privacy and interoperability reasons, the value of the `visible` property is
 
 An object containing a single property:
 
-- `visible` {{readonlyinline}}
+- `visible` {{ReadOnlyInline}}
   - : A boolean property, `false` if this `Window` is a popup, and `true` otherwise.
 
 ## Specifications

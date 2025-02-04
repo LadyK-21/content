@@ -2,19 +2,12 @@
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 ---
 
 {{JSRef}}
 
-The **`handler.setPrototypeOf()`** method is a trap for
-{{jsxref("Object.setPrototypeOf()")}}.
+The **`handler.setPrototypeOf()`** method is a trap for the `[[SetPrototypeOf]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.setPrototypeOf()")}}.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller")}}
 
@@ -24,13 +17,12 @@ The **`handler.setPrototypeOf()`** method is a trap for
 new Proxy(target, {
   setPrototypeOf(target, prototype) {
   }
-});
+})
 ```
 
 ### Parameters
 
-The following parameters are passed to the `setPrototypeOf()` method.
-`this` is bound to the handler.
+The following parameters are passed to the `setPrototypeOf()` method. `this` is bound to the handler.
 
 - `target`
   - : The target object.
@@ -39,13 +31,11 @@ The following parameters are passed to the `setPrototypeOf()` method.
 
 ### Return value
 
-The `setPrototypeOf()` method returns `true` if the
-`[[Prototype]]` was successfully changed, otherwise `false`.
+The `setPrototypeOf()` method must return a {{jsxref("Boolean")}} indicating whether or not the prototype was successfully changed. Other values are [coerced to booleans](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion).
+
+Many operations, including {{jsxref("Object.setPrototypeOf()")}}, throw a {{jsxref("TypeError")}} if the `[[SetPrototypeOf]]` internal method returns `false`.
 
 ## Description
-
-The **`handler.setPrototypeOf()`** method is a trap for
-{{jsxref("Object.setPrototypeOf()")}}.
 
 ### Interceptions
 
@@ -58,11 +48,9 @@ Or any other operation that invokes the `[[SetPrototypeOf]]` [internal method](/
 
 ### Invariants
 
-If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
+The proxy's `[[SetPrototypeOf]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
-- If `target` is not extensible, the `prototype`
-  parameter must be the same value as
-  `Object.getPrototypeOf(target)`.
+- If the target object is not extensible, the prototype cannot be changed. That is, if {{jsxref("Reflect.isExtensible()")}} returns `false` on `target`, and `prototype` is not the same as the result of `Reflect.getPrototypeOf(target)`, then the trap must return a falsy value.
 
 ## Examples
 

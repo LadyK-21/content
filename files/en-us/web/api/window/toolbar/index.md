@@ -1,15 +1,8 @@
 ---
-title: Window.toolbar
+title: "Window: toolbar property"
+short-title: toolbar
 slug: Web/API/Window/toolbar
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.toolbar
 ---
 
@@ -25,7 +18,7 @@ For privacy and interoperability reasons, the value of the `visible` property is
 
 An object containing a single property:
 
-- `visible` {{readonlyinline}}
+- `visible` {{ReadOnlyInline}}
   - : A boolean property, `false` if this `Window` is a popup, and `true` otherwise.
 
 ## Specifications

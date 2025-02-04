@@ -1,13 +1,8 @@
 ---
 title: "HTML attribute: elementtiming"
+short-title: elementtiming
 slug: Web/HTML/Attributes/elementtiming
-tags:
-  - Attribute
-  - Attributes
-  - HTML
-  - elementtiming
-  - Performance
-  - Reference
+page-type: html-attribute
 ---
 
 {{HTMLSidebar}}
@@ -36,9 +31,12 @@ Good contenders for elements you might want to observe are:
 ## Examples
 
 ```html
-<img alt="Alt for a main blog post image" src="my-massive-image.jpg" elementtiming="Main image">
+<img
+  alt="Alt for a main blog post image"
+  src="my-massive-image.jpg"
+  elementtiming="Main image" />
 
-<p elementtiming="important-text">Some very important information.</p">
+<p elementtiming="important-text">Some very important information.</p>
 ```
 
 ## See also
